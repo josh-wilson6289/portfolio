@@ -3,10 +3,16 @@
 }
 
 #about {
-  height: 1000px;
   margin-bottom: 30px;
 }
 
+#about h2 {
+  padding-top: 70px;
+}
+
+#projects h2 {
+  padding-top: 70px;
+}
 .btn {
   font-size: .8em;
 }
