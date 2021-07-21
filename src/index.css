@@ -22,6 +22,14 @@ body {
   color: #243951;
 }
 
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
 /* Utilities */
 
 .container {
@@ -44,42 +52,63 @@ body {
 }
 
 .btn:hover {
-  background: #7397bb;
+  background: #3f5267;
 }
 
 /* Navbar */
 
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  background: #243951;
-  overflow: hidden;
-  border-bottom: 3px solid floralwhite;
-  position: fixed;
-  top: 0;
+header {
+  display: inline-block;
   width: 100%;
-  padding: 0 25px;
-  z-index: 100;
+  padding: 25px 80px;
+  background-color: #243951;
+  position: fixed;
+  z-index: 1;
+  border-bottom: 3px solid floralwhite;
 }
 
-#navbar a {
+.logo a {
+  text-decoration: none;
+  float: left;
+  padding: 20px;
   color: floralwhite;
-  padding: 20px;
 }
 
-#navbar .logo {
-  padding: 20px;
+#nav-items {
+  float: right;
 }
 
-#navbar ul {
-  display: flex;
-  justify-content: flex-end;
+#nav-items ul li {
+  display: inline-block;
+  padding: 15px 25px;
 }
 
-#navbar ul li a {
-  display: block;
-  padding: 20px;
-  text-align: center;
+#nav-items ul li:hover {
+  background-color: #3f5267;
+}
+
+#nav-items ul li a {
+  text-decoration: none;
+  display: inline-block;
+  color: floralwhite;
+  font-weight: 600;
+}
+
+.toggle-btn {
+  width: 35px;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  display: none;
+  color: floralwhite;
+  display: none;
+}
+
+.toggle-btn span {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 8px;
 }
 
 /* Showcase */
@@ -90,7 +119,7 @@ body {
   max-width: 100%;
   color: #e0e2db;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 150px;
   border-bottom: 2px solid #157145;
 }
 
@@ -123,11 +152,11 @@ body {
   text-decoration: bold;
   font-size: 3em;
   text-align: center;
-  padding-top: 90px;
+  margin-top: 75px;
 }
 
 #about p {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #portfolio-pic {
@@ -140,6 +169,169 @@ body {
 
 #tech {
   text-align: center;
-  padding: 50px;
+  padding: 10px;
+  font-size: 2em;
 }
 
+/* Projects */
+
+#projects .project-box {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+
+#projects h2 {
+  text-decoration: bold;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 75px;
+}
+
+#projects .project-box h3 {
+  font-size: 2em;
+  padding: 10px;
+}
+
+#projects .project-pic {
+  background: no-repeat center center/cover;
+  width: 100%;
+  max-height: 500px;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+#projects .project-description h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+#projects .project-description p {
+  text-align: center;
+}
+
+#projects .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px;
+}
+
+
+/* Contact */
+
+#contact {
+  margin-top: 75px;
+}
+#contact h2 {
+  text-decoration: bold;
+  font-size: 3em;
+  text-align: center;
+  line-height: 1em;
+}
+
+#contact h3 {
+  margin-top: 40px;
+  font-size: 2em;
+  text-align: center;
+}
+
+#contact .contact-container {
+  display: flex;
+  justify-content: center;
+}
+#contact .contact-box {
+  width: 50%;
+  padding: 50px;
+  text-align: center;
+}
+
+#contact .contact-box p {
+  width: 100%;
+  word-wrap: break-word;
+}
+
+#contact .contact-box i {
+  color: #243951;
+}
+
+/* Footer */
+
+#footer {
+  text-align: center;
+  background: #243951;
+  color: floralwhite;
+  padding: 20px;
+}
+
+#footer ul {
+  text-align: center;
+  list-style: none;
+  margin: 0 auto;
+  display: inline;
+}
+
+#footer li {
+  display: inline;
+  text-align: center;
+  padding-left: 8px;
+}
+
+#footer img {
+  height: 25px;
+  width: 25px;
+  margin: 10px;
+}
+
+#footer a {
+  display: inline-block;
+  color: floralwhite;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/* Media  */
+@media screen and (max-width: 768px) {
+
+  #projects .buttons {
+    justify-content: space-evenly;
+  }
+
+  #projects .project-pic {
+    height: 180px;
+  }
+
+  #contact .contact-box .email, .phone{
+    font-size: .75em;
+  }
+
+  #showcase {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  .toggle-btn {
+    display: block;
+  }
+
+  #nav-items {
+    display: none;
+    width: 100%;
+    border-top: 1px solid floralwhite;
+    padding-top: 20px;
+    margin-top: 10px;
+  }
+
+  #nav-items ul li {
+    padding: 5px;
+    width: 100%;
+
+  }
+  #nav-items.show {
+    display: block;
+  }
+}
