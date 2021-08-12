@@ -77,6 +77,7 @@ const Projects = () => {
   const portfolio = portfolioPieces.map((portfolioPiece) => {
     return (
       <PortfolioPiece
+      key={portfolioPiece.title}
       title={portfolioPiece.title}
       image={portfolioPiece.image}
       alt={portfolioPiece.alt}
